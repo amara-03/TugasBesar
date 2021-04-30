@@ -58,3 +58,10 @@ Route::middleware('is_admin')->prefix('admin')->group(function(){
 
 
 // PENGOLOLAAN BRANDS
+
+
+
+//Route Brands
+Route::get('admin/laporan/masuk', [App\Http\Controllers\BrandController::class, 'index'])
+    ->name('admin.laporan')
+    ->middleware('is_admin');
